@@ -12,6 +12,7 @@ namespace UnitySampleAssets._2D
         public float lookAheadReturnSpeed = 0.5f;
         public float lookAheadMoveThreshold = 0.1f;
         public float yPosRestriction = -1;
+        public float offsetY = 0.3f;
 
         private float offsetZ;
         private Vector3 lastTargetPosition;
@@ -22,7 +23,7 @@ namespace UnitySampleAssets._2D
         // Use this for initialization
         private void Start()
         {
-            lastTargetPosition = target.position;
+            lastTargetPosition = target.position = new Vector3(target.position.x, target.position.y + 5, target.position.z); ;
             offsetZ = (transform.position - target.position).z;
             transform.parent = null;
         }
@@ -38,7 +39,6 @@ namespace UnitySampleAssets._2D
 
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - lastTargetPosition).x;
-
             bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
             if (updateLookAheadTarget)
@@ -56,6 +56,7 @@ namespace UnitySampleAssets._2D
             //clamp camera when player falls below ground
             newPos = new Vector3(newPos.x, Mathf.Clamp(newPos.y, yPosRestriction, Mathf.Infinity), newPos.z);
 
+            newPos.y += 0.4f;
             transform.position = newPos;
 
             lastTargetPosition = target.position;
@@ -68,6 +69,8 @@ namespace UnitySampleAssets._2D
                 GameObject searchResult = GameObject.FindGameObjectWithTag("Player");
                 if(searchResult != null)
                 {
+                    Debug.Log("FOUND PLAYER");
+
                     target = searchResult.transform;
                 }
                 nextTimeToSearch = Time.time + 0.5f;
