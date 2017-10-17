@@ -11,6 +11,9 @@ public class ArmRotation : MonoBehaviour {
         difference.Normalize();     //Keep same proportions of xyz but when added together they will == 1
 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;   //Find angle in degrees
+
+        //If rotz == 90~270 Face top of character left
+        //Else if rotz == 271~69 Face character right
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotOffset);
 	}
 }
