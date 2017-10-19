@@ -23,7 +23,7 @@ namespace UnitySampleAssets._2D
         // Use this for initialization
         private void Start()
         {
-            lastTargetPosition = target.position = new Vector3(target.position.x, target.position.y, target.position.z); ;
+            lastTargetPosition = target.position = new Vector3(target.position.x, target.position.y - 1.0f, target.position.z); ;
             offsetZ = (transform.position - target.position).z;
             transform.parent = null;
         }

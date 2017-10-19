@@ -1,12 +1,15 @@
 fileFormatVersion: 2
 guid: 6f971c274d2790641b1c583288296854
-timeCreated: 1508301812
+timeCreated: 1508371904
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: crate_metal
     21300002: crate_item
     21300004: crate_weapon
+    21300006: Crates_0
+    21300008: Crates_1
+    21300010: Crates_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -43,7 +46,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 50
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -73,39 +76,39 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crate_metal
+      name: Crates_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 74
-        width: 64
-        height: 64
+        x: 8
+        y: 148
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: crate_item
+      name: Crates_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 5
-        width: 64
-        height: 64
+        x: 8
+        y: 10
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: crate_weapon
+      name: Crates_2
       rect:
         serializedVersion: 2
-        x: 73
-        y: 5
-        width: 64
-        height: 64
+        x: 146
+        y: 10
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
